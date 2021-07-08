@@ -1,61 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen16dp"
+    android:background="@drawable/ic_background">
 
-    <data>
-        <variable
-            name="searchViewModel"
-            type="com.music.search.presentation.SearchViewModel" />
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/search_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/dimen16dp"
-        android:background="@drawable/ic_background">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen16dp"
+        android:layout_marginTop="@dimen/dimen16dp"
+        android:layout_marginEnd="@dimen/dimen16dp"
+        android:padding="@dimen/dimen8dp"
+        android:text="@string/title_search_fragment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/search_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen16dp"
-            android:layout_marginTop="@dimen/dimen16dp"
-            android:layout_marginEnd="@dimen/dimen16dp"
-            android:padding="@dimen/dimen8dp"
-            android:text="@string/title_search_fragment"
-            android:textColor="@color/white"
-            android:textSize="@dimen/dimen16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen16dp"
+        android:layout_marginTop="@dimen/dimen16dp"
+        android:layout_marginEnd="@dimen/dimen16dp"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/ic_magnifying_glass"
+        android:drawablePadding="@dimen/dimen8dp"
+        android:hint="@string/hint_search_box"
+        android:padding="@dimen/dimen8dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_title" />
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen16dp"
-            android:layout_marginTop="@dimen/dimen16dp"
-            android:layout_marginEnd="@dimen/dimen16dp"
-            android:background="@color/white"
-            android:padding="@dimen/dimen8dp"
-            android:searchIcon="@drawable/ic_magnifying_glass"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_title"
-            tools:queryHint="@string/hint_search_box" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/search_album_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen16dp"
-            android:layout_marginTop="@dimen/dimen48dp"
-            android:layout_marginEnd="@dimen/dimen16dp"
-            android:padding="@dimen/dimen8dp"
-            android:text="@string/name_search_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_bar" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/search_album_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen16dp"
+        android:layout_marginTop="@dimen/dimen48dp"
+        android:layout_marginEnd="@dimen/dimen16dp"
+        android:padding="@dimen/dimen8dp"
+        android:text="@string/name_search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

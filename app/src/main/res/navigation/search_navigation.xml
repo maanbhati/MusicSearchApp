@@ -23,5 +23,9 @@
         <action
             android:id="@+id/action_searchResultFragment_to_SearchFragment"
             app:destination="@id/SearchFragment" />
+        <argument
+            android:name="searchKeyword"
+            android:defaultValue=""
+            app:argType="string" />
     </fragment>
 </navigation>
