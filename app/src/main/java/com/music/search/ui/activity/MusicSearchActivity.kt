@@ -1,4 +1,4 @@
-package com.music.search.presentation
+package com.music.search.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

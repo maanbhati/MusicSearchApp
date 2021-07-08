@@ -1,4 +1,4 @@
-package com.music.search.presentation
+package com.music.search.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
