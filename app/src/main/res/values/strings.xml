@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MusicSearchApp</string>
+    <string name="title_search_fragment">Welcome to Music Search app, please enter any album name to search.</string>
+    <string name="hint_search_box">Enter album name i.e believe</string>
+    <string name="name_search_button">Search Album</string>
+</resources>
