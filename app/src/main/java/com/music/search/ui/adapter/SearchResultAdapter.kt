@@ -9,9 +9,10 @@ import com.music.search.R
 class SearchResultAdapter(private val searchResult: ArrayList<String>) :
     RecyclerView.Adapter<SearchResultAdapter.SearchResultViewHolder>() {
 
-    fun updateBreed(newResult: List<String>) {
+    fun updateBreed(newResult: String) {
+        System.out.println(">>> newResult")
         searchResult.clear()
-        searchResult.addAll(newResult)
+        //searchResult.addAll(newResult)
         notifyDataSetChanged()
     }
 

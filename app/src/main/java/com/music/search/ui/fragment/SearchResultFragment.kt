@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.music.search.databinding.FragmentSearchResultBinding
@@ -36,7 +35,7 @@ class SearchResultFragment : Fragment(), ResponseListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         bindView()
         initViews()
-        //observeData()
+        observeData()
     }
 
     private fun initViews() {
@@ -55,7 +54,7 @@ class SearchResultFragment : Fragment(), ResponseListener {
     }
 
     private fun observeData() {
-        viewModel.breeds.observe(viewLifecycleOwner, Observer { result ->
+        viewModel.totalResult.observe(viewLifecycleOwner, { result ->
             when (result) {
                 is Resource.Loading -> {
                     showProgressBar()
