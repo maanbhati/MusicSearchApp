@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.music.search.databinding.FragmentSearchResultBinding
@@ -13,14 +14,15 @@ import com.music.search.ui.viewmodel.SearchResultViewModel
 import com.music.search.utils.Resource
 import com.music.search.utils.ResponseListener
 import kotlinx.android.synthetic.main.fragment_search_result.*
-import org.koin.android.viewmodel.ext.android.viewModel
+
+//import org.koin.android.viewmodel.ext.android.viewModel
 
 private const val TAG = "SearchResultFragment"
 
 class SearchResultFragment : Fragment(), ResponseListener {
 
     private lateinit var searchResultAdapter: SearchResultAdapter
-    private val viewModel: SearchResultViewModel by viewModel()
+    private val viewModel: SearchResultViewModel by viewModels()
     private lateinit var binding: FragmentSearchResultBinding
 
     override fun onCreateView(

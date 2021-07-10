@@ -55,7 +55,7 @@ dependencies {
     def viewModelSavedStateVersion = "2.2.0"
     def loggingInterceptorVersion = "4.7.2"
     def glideVersion = "4.8.0"
-    def fragmentVersion = '1.2.1'
+    def fragmentVersion = '1.3.5'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreVersion"
     implementation "androidx.appcompat:appcompat:$appCompactVersion"
@@ -73,6 +73,7 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelLifeCycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$viewModelSavedStateVersion"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     implementation "com.github.bumptech.glide:compiler:$glideVersion"

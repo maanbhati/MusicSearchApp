@@ -6,7 +6,7 @@ import com.music.search.domain.executer.ThreadExecutor
 import com.music.search.domain.repository.ISearchRepository
 import io.reactivex.Single
 
-class GetSearchResult(
+open class GetSearchResult(
     private val breedsRepository: ISearchRepository,
     threadExecutor: ThreadExecutor,
     postExecutionThread: PostExecutionThread

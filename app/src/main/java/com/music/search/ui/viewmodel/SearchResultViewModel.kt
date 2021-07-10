@@ -21,7 +21,6 @@ class SearchResultViewModel(private val getSearchResult: GetSearchResult) : View
     lateinit var responseListener: ResponseListener
 
     init {
-        Log.i(TAG, "created!")
         loadingError.value = ""
         getSearchResult()
     }
