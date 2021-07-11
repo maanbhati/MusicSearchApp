@@ -16,14 +16,13 @@ Junit for unit testing,
 Expresso for UI testing
 
 # External Libraries
-Retrofit2
-RxJava
-RxAndroid
-Dagger2
-Glide
-Okhttp
+Retrofit2,
+RxJava,
+Dagger2,
+Glide,
+Okhttp,
 Mockito
 
 # Testing
-Unit tests
-Espresso tests
+Unit Tests,
+Espresso Tests
