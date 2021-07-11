@@ -16,11 +16,11 @@ Junit for unit testing,
 Expresso for UI testing
 
 # External Libraries
-Retrofit2 network calls,
-RxJava for Threading,
+Retrofit2 for network calls,
+RxJava,
 Dagger2 for dependency injection,
 Glide for image loading,
-Okhttp for network connection,
+Okhttp for http connection,
 Mockito for mocking objects
 
 # Testing
