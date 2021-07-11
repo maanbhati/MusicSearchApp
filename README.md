@@ -7,12 +7,12 @@ Scenario 2: Viewing pictures of album/artist/track Given I have launched the app
 Important: For running the app api_key needs to be generated from here (https://www.last.fm/api/account/create), once api_key is generated repalce that with API_KEY = "<YOUR_API_KEY>" valuse inside Constants.kt file inside project.
  
 # Architectural Approach: Clean Architecture
-Clear separation with Clean Architecture (presentation/interfaces/data)
-Presentation with Android Presenter and Kotlin Synthetic approach
-Data with Interactor (impl) and Interactor
-Dependency Injection with Dagger2
-Mapping data to domain model class
-Junit for unit testing
+Clear separation with Clean Architecture (presentation/interfaces/data),
+Presentation with Android Presenter and Kotlin Synthetic approach,
+Data with Interactor (impl) and Interactor,
+Dependency Injection with Dagger2,
+Mapping data to domain model class,
+Junit for unit testing,
 Expresso for UI testing
 
 # External Libraries
