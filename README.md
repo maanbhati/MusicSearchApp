@@ -4,7 +4,7 @@ As a user running the application I can select album/artist/track from the list 
 Scenario 1: Viewing the item list When I launch the app Then I see a list of items 
 Scenario 2: Viewing pictures of album/artist/track Given I have launched the app When I select a item from the list Then I see detailed data of the selected item.
 
-Important: For running the app api_key needs to be generated from here (https://www.last.fm/api/account/create), once api_key is generated repalce that with API_KEY = "<YOUR_API_KEY>" valuse inside Constant.kt fiel inside project
+Important: For running the app api_key needs to be generated from here (https://www.last.fm/api/account/create), once api_key is generated repalce that with API_KEY = "<YOUR_API_KEY>" valuse inside Constants.kt file inside project.
  
 Architectural Approach: Clean Architecture
 Clear separation with Clean Architecture (presentation/interfaces/data)
