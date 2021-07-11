@@ -8,7 +8,8 @@ import io.reactivex.schedulers.Schedulers
 class TracksPresenterImpl(var mView: TracksView, var mInteractor: TracksInteractor) :
     TracksPresenter {
     var mDisposable: Disposable? = null
-    override fun getTopTracks(userName: String, apiKey: String) {
+
+    override fun getTracks(userName: String, apiKey: String) {
         disposeRequest()
         mView.showProgress()
         mView.hidEmpty()

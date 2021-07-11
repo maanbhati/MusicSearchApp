@@ -44,7 +44,7 @@ open class AlbumsFragment : BaseFragment(), AlbumsView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mPresenter.getTopAlbums(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
+        mPresenter.getAlbums(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
     }
 
     override fun onAttach(context: Context) {
@@ -66,7 +66,7 @@ open class AlbumsFragment : BaseFragment(), AlbumsView {
 
     override fun searchUserName(userName: String) {
         mAdapter?.clearDataset()
-        mPresenter.getTopAlbums(userName, Constants.API_KEY)
+        mPresenter.getAlbums(userName, Constants.API_KEY)
     }
 
     override fun showProgress() {

@@ -29,7 +29,7 @@ class ArtistsFragment : BaseFragment(), ArtistsView {
     var mAdapter: ArtistsAdapter? = null
     override fun searchUserName(userName: String) {
         mAdapter?.clearDataset()
-        mPresenter.getUserTopArtists(userName, Constants.API_KEY)
+        mPresenter.getArtists(userName, Constants.API_KEY)
     }
 
     override fun onCreateView(
@@ -49,7 +49,7 @@ class ArtistsFragment : BaseFragment(), ArtistsView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mPresenter.getUserTopArtists(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
+        mPresenter.getArtists(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
     }
 
     override fun onAttach(context: Context) {

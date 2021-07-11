@@ -9,7 +9,7 @@ class AlbumsPresenterImpl(var mView: AlbumsView, var mInteractor: AlbumsInteract
     AlbumsPresenter {
     var mDisposable: Disposable? = null
 
-    override fun getTopAlbums(userName: String, apiKey: String) {
+    override fun getAlbums(userName: String, apiKey: String) {
         mView.showProgress()
         mView.hidEmpty()
         disposeRequest()

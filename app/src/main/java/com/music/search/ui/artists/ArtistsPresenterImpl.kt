@@ -13,7 +13,7 @@ class ArtistsPresenterImpl(var mView: ArtistsView, var mInteractor: ArtistsInter
         disposeRequest()
     }
 
-    override fun getUserTopArtists(userName: String, apiKey: String) {
+    override fun getArtists(userName: String, apiKey: String) {
         Log.e("getUserTopArtists", "getting data for$userName")
         disposeRequest()
         mView.showProgress()

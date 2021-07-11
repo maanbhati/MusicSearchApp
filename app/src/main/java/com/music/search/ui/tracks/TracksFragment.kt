@@ -34,7 +34,7 @@ class TracksFragment : BaseFragment(), TracksView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mPresenter.getTopTracks(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
+        mPresenter.getTracks(Constants.DEFAULT_LASTFM_USER, Constants.API_KEY)
     }
 
     override fun onCreateView(
@@ -98,7 +98,7 @@ class TracksFragment : BaseFragment(), TracksView {
 
     override fun searchUserName(userName: String) {
         mAdapter?.clearDataset()
-        mPresenter.getTopTracks(userName, Constants.API_KEY)
+        mPresenter.getTracks(userName, Constants.API_KEY)
     }
 
     /**
