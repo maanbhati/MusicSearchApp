@@ -36,51 +36,66 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
+def retrofitVersion = "2.4.0"
+def rxJavaVersion = "2.1.9"
+def rxAndroidVersion = "2.0.1"
+def daggerVersion = "2.24"
+def glideVersion = "3.8.0"
+
 dependencies {
-    def coreVersion = "1.3.2"
-    def appCompactVersion = "1.2.0"
-    def constrainLayoutVersion = "2.0.4"
-    def supportVersion = "1.0.0"
-    def navVersion = "2.3.2"
-    def rxJavaVersion = "2.1.16"
-    def rxAndroidVersion = "2.0.2"
-    def retrofitVersion = '2.9.0'
-    def koinVersion = '2.1.6'
-    def viewModelLifeCycleVersion = '2.1.0'
-    def viewModelSavedStateVersion = "2.2.0"
-    def loggingInterceptorVersion = "4.7.2"
-    def glideVersion = "4.8.0"
-    def fragmentVersion = '1.3.5'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:$coreVersion"
-    implementation "androidx.appcompat:appcompat:$appCompactVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$constrainLayoutVersion"
-    implementation "androidx.legacy:legacy-support-v4:$supportVersion"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "org.koin:koin-android:$koinVersion"
-    implementation "org.koin:koin-android-scope:$koinVersion"
-    implementation "org.koin:koin-android-viewmodel:$koinVersion"
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelLifeCycleVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$viewModelSavedStateVersion"
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
-    implementation "com.github.bumptech.glide:compiler:$glideVersion"
-    implementation "androidx.fragment:fragment:$fragmentVersion"
-    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
-    implementation 'com.google.android.material:material:1.4.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Retrofit2
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    //RxJava RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+    // Dagger2
+    implementation "com.google.dagger:dagger:${daggerVersion}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+    kapt "com.google.dagger:dagger-compiler:${daggerVersion}"
+    // Glide
+    implementation "com.github.bumptech.glide:glide:${glideVersion}"
+
+    // Android
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'junit:junit:4.12'
+    provided 'javax.annotation:jsr250-api:1.0'
+    //Recyclerview assertions
+    androidTestImplementation('androidx.test.espresso:espresso-contrib:3.1.0') {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+        exclude module: 'support-v13'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'appcompat-v7'
+        exclude module: 'design'
+    }
+    //Okhttp
+    androidTestImplementation 'com.squareup.okhttp3:mockwebserver:3.6.0'
+
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+
+    //Mockito
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

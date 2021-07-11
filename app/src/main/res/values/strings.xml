@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">MusicSearchApp</string>
-    <string name="title_search_fragment">Welcome to Music Search app, please enter any album name to search.</string>
-    <string name="hint_search_box">Enter album name i.e believe</string>
-    <string name="name_search_button">Search Album</string>
+    <string name="app_name">Music Search</string>
+    <string name="title_artists">Artists</string>
+    <string name="title_tracks">Tracks</string>
+    <string name="title_albums">Albums</string>
+    <string name="times">times</string>
+    <string name="plays">plays</string>
+    <string name="minutes">minutes.</string>
+    <string name="search_hint">Search</string>
+    <string name="empty_here">Try another user name</string>
+    <string name="error_message">An error has occurred, please try again</string>
+    <string name="request_user_name">Please enter a user name</string>
 </resources>
