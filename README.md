@@ -8,7 +8,7 @@ Important: For running the app api_key needs to be generated from here (https://
  
 # Architectural Approach: Clean Architecture
 Clear separation with Clean Architecture (presentation/interfaces/data),
-Presentation with Android Presenter and Kotlin Synthetic approach,
+Presentation with Android Presenter (MVP) and Kotlin Synthetic approach,
 Data with Interactor (impl) and Interactor,
 Dependency Injection with Dagger2,
 Mapping data to domain model class,
